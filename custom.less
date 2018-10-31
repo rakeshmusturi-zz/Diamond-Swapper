@@ -1,29 +1,33 @@
 .mainContainer {
-    text-align: center;
-    .ScoreBoardContainer {
-      @media (max-width: 991px) {
-        h1 {
-          font-size: 52px;
-        }
+  text-align: center;
+  .ScoreBoardContainer {
+    @media (max-width: 991px) {
+      h1 {
+        font-size: 52px;
       }
     }
-    .wrapper {
-      display: grid;
-      border: 1px solid transparent;
-      grid-template-columns: repeat(8, 12.5%);
-      grid-template-rows: repeat(8, 12.5%);
-      @media (min-width: 991px) {
-        width: 30%;
-      }
-      margin: 0 auto;
-      .box {
-        margin: 5px;
-        border: 1px solid black;
-        cursor: pointer;
-        img {
-          width: 100%;
-          height: 100%;
-        }
+  }
+  .wrapper {
+    &.gameOver {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    display: grid;
+    border: 1px solid transparent;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(8, 12.5%);
+    @media (min-width: 991px) {
+      width: 30%;
+    }
+    margin: 0 auto;
+    .box {
+      margin: 5px;
+      border: 1px solid black;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
+  }
 }
