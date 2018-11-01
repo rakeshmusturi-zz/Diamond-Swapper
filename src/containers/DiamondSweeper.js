@@ -11,24 +11,24 @@ class DiamondSweeper extends Component {
     super(props);
     this.state = {
         data: [
-            ["", "", "", "", "", "", "diamond", ""],
-            ["", "", "", "", "diamond", "", "", ""],
-            ["diamond", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "diamond"],
-            ["", "", "diamond", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "diamond"],
-            ["", "", "", "diamond", "", "", "", ""],
-            ["diamond", "", "", "", "", "", "", ""]
+          ["", "", "", "", "", "", "diamond", ""],
+          ["", "", "", "", "diamond", "", "", ""],
+          ["diamond", "", "", "", "", "", "", ""],
+          ["", "", "", "", "", "", "", "diamond"],
+          ["", "", "diamond", "", "", "", "", ""],
+          ["", "", "", "", "", "", "", "diamond"],
+          ["", "", "", "diamond", "", "", "", ""],
+          ["diamond", "", "", "", "", "", "", ""]
         ],
         visited: [
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false],
-            [false, false, false, false, false, false, false, false]
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false],
+          [false, false, false, false, false, false, false, false]
         ],
         score: 64,
         completed: false,
@@ -69,11 +69,7 @@ class DiamondSweeper extends Component {
     const image = this.getBoxImage(cell, rowIndex, colIndex);
     return (
       <div className="box" key={colIndex}>
-        {
-          image
-            ? <img src={image} onClick={() => this.checkForDiamond(rowIndex, colIndex)} />
-            : null
-        }
+        {image ? <img src={image} onClick={() => this.checkForDiamond(rowIndex, colIndex)} /> : null}
       </div>
     );
   }
@@ -91,7 +87,7 @@ class DiamondSweeper extends Component {
         return downArrow;
   }
   buildBox = (row, rowIndex) => {
-      return row.map((cell, colIndex) => this.getBox(cell, rowIndex, colIndex));
+    return row.map((cell, colIndex) => this.getBox(cell, rowIndex, colIndex));
   }
    render() {
      return (
